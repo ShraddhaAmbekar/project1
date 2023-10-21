@@ -112,3 +112,53 @@ let z = x ** y;//exponential
 console.log(z);}
 typeof(z);
 console.log(typeof(z));
+let n = 16 + "Volvo";
+console.log(n);
+x = 16 + 4 + "Volvo";
+console.log(x);
+let m   // Now m is undefined
+m = 5;       // Now m is a Number
+m = "John";  // Now m is a String
+console.log(m);
+c=20.00
+p=30
+console.log(c/p);
+let t=333333333333333333
+console.log(t);
+let ykp=99999999999999999987
+console.log(ykp);
+let yk=99999999999999999987789
+console.log(yk);
+var ykz=99999999999999999987789n
+console.log(ykz);
+let qu=33.333363333339376
+console.log(qu);
+
+let lk = BigInt("123456789012345678901234567890");
+console.log(lk);
+console.log(lk==qu);
+const car = ["Saab", "Volvo", "BMW"];
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.length;
+console.log(length);
+const ffruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(ffruits[0]);
+var g=5
+h=10
+console.log(x===y);
+console.log(g+=h);
+console.log(g);
+console.log(g**= h)
+console.log(g<<=h)
+g=15
+// g--
+console.log(g)
+console.log(	j=g |= h)
+
+let mn= 50
+let nm= 10 + g;
+console.log("Value of mn is: " + mn);
+
+
+
