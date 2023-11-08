@@ -49,5 +49,59 @@ console.log(`${string4}, ${string5}`);
 // string
 console.log(string5.substring(4,8));
 
+let v = "I am from Kolhapur, I love kolhapur."
+console.log(v.length);
+console.log(v.slice(10,18));//index
+console.log(v.substring(10,18));//index
+console.log(v.slice(-10,18));
+console.log(v.substring(-10,18));
+console.log(v.substr(10,17));// length
+console.log(v.substr(-10,17));
+console.log(v.replace("Kolhapur","Mumbai"));
+console.log(v.replaceAll('Kolhapur','Mumbai'));
+console.log(v.replace(/kolhapur/i,"Mumbai"));
+console.log(v.replace(/kolhapur/ig,"Mumbai"));
+console.log(v.replace(/Kolhapur/g,"Mumbai"));
+console.log(v.toUpperCase());
+console.log(v.toLowerCase());
+let w = "I live in Kolhapur.";
+let p= "    Kolhapur is famous city.   ";
+k=v.concat(' ',w,' ',p);
+console.log(k);
+console.log('lwr->',v.toLowerCase(), 'upr->',v.toUpperCase());
+console.log(p.trim());
+console.log(p.trimStart());
+console.log(p.trimEnd());
+
+let q = 23452545;
+console.log(q.toString());
+console.log(toString(q));
+console.log(v.charAt(15));//index
+console.log(v.length);
+console.log(v);
+console.log(v.length);
+console.log(v.charAt(40));
+console.log(v.charAt(10));
+console.log(v.includes("love"));
+
+console.log(v.indexOf("love"));
+console.log(v.indexOf("pune"));
+
+console.log(v.charAt('love'));
+console.log(v.charAt('l'));
+console.log(v.charAt(24));
+console.log(v.charAt(87));
+console.log(v.match('love'));
+console.log(v.match(/love/g));
+console.log(v.matchAll('Kolhapur'));
+
+let r = "21-02-2001";
+console.log(r.split("-"));
+
+let statusCode ="100256";
+let a = statusCode.startsWith("100");
+console.log(a)
+console.log(statusCode.endsWith("568"));
+
 
 

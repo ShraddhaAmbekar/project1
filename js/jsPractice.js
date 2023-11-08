@@ -159,6 +159,10 @@ console.log(	j=g |= h)
 let mn= 50
 let nm= 10 + g;
 console.log("Value of mn is: " + mn);
-
+let pl = 500
+c = parseInt(pl)
+d=pl.parseInt();
+console.log(c);
+console.log(d);
 
 
