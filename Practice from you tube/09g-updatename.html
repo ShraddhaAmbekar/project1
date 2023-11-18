@@ -1,0 +1,11 @@
+<input class = "js-update-name"
+onkeyup="
+updateName()">
+<p class='message1'></p>
+
+<script>
+    function updateName() {
+    const inputElement = document.querySelector('.js-update-name');
+    document.querySelector('.message1').innerHTML = `${inputElement.value}`
+    }
+</script>

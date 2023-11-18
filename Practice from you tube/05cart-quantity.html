@@ -8,25 +8,40 @@
 </head>
 
 <body>
-  <button onclick="
-  console.log(`Cart quantity: ${cartQuantity}`)">Show Quantity</button>
+  <button class="update1" onclick="
+  //console.log(`Cart quantity: ${cartQuantity}`)
+  updateQuantity()">Show Quantity</button>
 
-  <button onclick="updateCartquantity(1)">Add to Cart</button>
-  <button onclick="updateCartquantity(2)">+2</button>
-  <button onclick="updateCartquantity(3)">+3</button>
-  <button onclick="updateCartquantity(4)">+4</button>
-  <button onclick="updateCartquantity(5)">+5</button>
-  <button onclick="updateCartquantity(-1)">Remove from Cart</button>
-  <button onclick="updateCartquantity(-2)">-2</button>
-  <button onclick="updateCartquantity(-2)">-3</button>
+  <button class="update" onclick="updateCartquantity(1)    
+  ">Add to Cart</button>
+  
+  <button class="update" onclick=" updateCartquantity(2)
+  ">+2</button>
 
-  <button onclick="
+  <button class="update" onclick="updateCartquantity(3)
+  ">+3</button>
+  <button class="update" onclick="updateCartquantity(4)
+  ">+4</button>
+  <button class="update" onclick="updateCartquantity(5)
+  ">+5</button>
+  <button class="update" onclick="updateCartquantity(-1)
+  ">Remove from Cart</button>
+  <button class="update" onclick="updateCartquantity(-2)
+  ">-2</button>
+  <button class="update" onclick="updateCartquantity(-2)
+  ">-3</button>
+
+  <button class="update" class="update" onclick="updateCartquantity(0)
+  
   cartQuantity = 0;
   console.log('Cart is reset');
   ">Reset Cart</button>
+  <p class='message2'></p>
 
   <script>
     let cartQuantity = 0;
+    updateQuantity()
+
     function updateCartquantity(change) {
       if (cartQuantity + change > 10) {
         alert('The cart is full')
@@ -37,7 +52,12 @@
         return;
       }
       cartQuantity += change;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      //console.log(`Cart quantity: ${cartQuantity}`);
+      updateQuantity();
+    }
+    function updateQuantity(){
+      document.querySelector('.message2').innerHTML=`Cart quantity is ${cartQuantity}`
+      
     }
   </script>
 </body>

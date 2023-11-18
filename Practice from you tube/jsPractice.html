@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style> 
+    .button1{
+        width: 150px;
+        height: 30px;
+        background-color: rgb(255, 216, 20);
+        border: none;
+        border-radius: 60px;
+    }
+    .button2{
+        width: 120px;
+        height: 35px;
+        background-color:black;
+        color:white;   
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+    }
+    .button3{
+        width: 150px;
+        height: 35px;
+        background-color:rgb(221, 220, 220);  
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+    }
+    </style>
+</head>
+<body>
+    <!-- amazon button -->
+    <button class="button1">Add to cart</button> 
+    <!-- Uber buttons -->
+    <button class="button2">Request now</button>
+    <button class="button3">Schedi;e for later</button>
+    <button class="js-button">Text</button>
+
+    <script>
+        const button = document.querySelector('.js-botton');
+        console.log(button.classList.contains('.js-button'));
+    </script>
+</body>
+</html>
+

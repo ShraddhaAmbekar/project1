@@ -1,0 +1,23 @@
+<head>
+    <style>
+     .toggle-button{
+        width: 100px;
+        height: 35px;        background-color:rgb(205, 203, 203);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+    .is-toggled{
+        background-color: black;
+        color: white;
+    }
+    </style>
+</head> 
+<body>
+<button class="toggle-button js-button" onclick="
+    const button= document.querySelector('.js-botton')
+    if(!button.classList.add('.is-toggled')){
+        button.classList.remove('.is-toggled')
+    }">Gameing</button>
+<body>

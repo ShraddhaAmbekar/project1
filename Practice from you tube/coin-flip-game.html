@@ -6,8 +6,10 @@
     <title>coin-flip-game.html</title>
 </head>
 <body>
+    <button onclick="playGame('heads')">heads</button>
+    <button onclick="playGame('tails')">tails</button>
     <script>
-        const randomNumber = Math.random();
+        //const randomNumber = Math.random();
             // if(randomNumber<=0.5){
             //     // console.log('heads');
             //     result='heads'
@@ -16,15 +18,21 @@
             // console.log('tails');
             //     result='tails'
             // }
-        const result = randomNumber<0.5 ? 'heads' : 'tails';
+        //const result = randomNumber<0.5 ? 'heads' : 'tails';
 
-        const guess = 'heads' 
+        //const guess = 'heads' 
             // if(guess===result){
             //     console.log('You win!');
             // }else{
             //     console.log('You lose!');
             // }
+            //console.log(guess === result ? 'You win!': 'You lose!');
+            function playGame(guess) {
+                const randomNumber = Math.random();
+                const result = randomNumber<0.5 ? 'heads' : 'tails';
+
                 console.log(guess === result ? 'You win!': 'You lose!');
+            }
     </script>
 </body>
 </html>

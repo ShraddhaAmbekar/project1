@@ -1,0 +1,43 @@
+<script>
+    product= {
+        name : 'basketball',
+        price : 2095,
+        'delivery-time' : '3 days'
+
+    }
+    
+    function comparePrice(product1, product2){
+        if(product1.price<product2.price){
+            return product1;
+        }else{
+            return product2;
+        }
+    }
+    function isSameProduct(product,product1){
+        if(product.name === product1.name &&
+            product.price === product1.price){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    product1= {
+        name : 'basketball',
+        price : 2595
+    }
+
+    product2= {
+        name : 'socks',
+        price : 1090
+    }
+        console.log(product);
+        product.price = 2595  //change product price
+        console.log(product.price);
+        console.log(product['delivery-time']);
+        console.log(comparePrice(product1,product2));
+        console.log(isSameProduct(product,product1));
+        console.log(isSameProduct(product1,product2));
+        console.log('Good Morning'.toLowerCase());
+        console.log('Good Morning '.repeat(3));
+
+</script>
