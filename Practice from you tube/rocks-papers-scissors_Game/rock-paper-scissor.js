@@ -45,7 +45,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
         score.losses +=1
       }else if(result === 'Tie.'){
          score.ties +=1
-       } 
+      } 
        
        localStorage.setItem('score',JSON.stringify(score));
 

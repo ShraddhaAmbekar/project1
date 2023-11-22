@@ -6,32 +6,75 @@
     <title>coin-flip-Updatedgame</title>
 </head>
 <body>   
-    <button onclick="playGame('heads')">heads</button>
-    <button onclick="playGame('tails')">tails</button>
-    <button onclick=" score1.wins=0
-    score1.losses = 0
-    localStorage.removeItem('score1')">Reset</button>
+    <button onclick="playGame('heads')" class="move-button">heads</button>
+    <button onclick="playGame('tails')" class="move-button">tails</button>
+
+    <p class="js-score1 score1"></p>
+    <p class="js-moves1 moves1"></p>
+    <p class="js-result1 result1"></p>
+
+    <button onclick=" 
+        score1.wins=0
+        score1.losses = 0
+        localStorage.removeItem('score1');
+        update
+      document.querySelector('result1').innerHTML=result1
+      document.querySelector('score1').innerHTML=score1" >Reset</button>
 
     <script>
         const score1 =JSON.parse(localStorage.getItem('score1'))||
-         {
+        {
             wins : 0,
             losses : 0
         }
+        
+        if (!score1)
+            score1={
+                wins:0,
+                losses:0}
+
         function playGame(guess) {
-                const randomNumber = Math.random();
-                const result = randomNumber<0.5 ? 'heads' : 'tails';
+            const computerMove = pickComputerMove1();
+            let result1='';
+                if(guess === 'head'){
+                    if(computerMove === guess){
+                        result1== 'You win.'
+                    }else(result1 = 'You lose.')
+                }
+                if(result1 === 'You win.'){
+                    score1.wins +=1
+                }else{score1.losses +=1
+                }
+                
+                localStorage.setItem('score1', JSON.stringify(score1));
 
-                console.log(guess === result ? 'You win!': 'You lose!');
-           
-            if(guess === result){
-                score1.wins++
-            } else {
-                score1.losses++
+                updatescore1Element1();
+
+                
+       document.querySelector('.js-result1').innerHTML = result;
+
+        document.querySelector('.js-moves1').innerHTML =
+        `You 
+        <img src="${playerMove}-emoji.png" class="move-icon">
+        <img src="${computerMove}-emoji.png" class="move-icon">
+        Computer`
+        }
+
+        function updatescore1Element1(){
+            document.querySelector('.js-score1')
+            .innerHTML =`Wins : ${score1.wins}, Losses : ${score1.losses}`
+        }
+
+        function pickComputerMove1(){
+            const randomNumber1 = Math.random();
+            if (randomNumber1 >= 0 && randomNumber1 < 1/2) {
+            computerMove='head';
+            }else{
+            computerMove='tail';
             }
-            console.log(score1);
 
-            localStorage.setItem('score1', JSON.stringify(score1));
+            return computerMove1;
+            
         }
     </script>
 </body>
