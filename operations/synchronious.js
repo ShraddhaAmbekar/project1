@@ -1,6 +1,6 @@
 const { log } = require("console")
 const fs= require("fs")
-fs.writeFileSync("write.txt","I am from india.")
+//fs.writeFileSync("write.txt","I am from india.")
 //fs.writeFile("write.txt","I am from india.")
 r=fs.readFileSync("write.txt" ,"utf8")
 console.log(r);
@@ -9,4 +9,11 @@ console.log(r);
 //fs.unlinkSync("write.html")
 //fs.unlinkSync("write2.html")
 //fs.unlinkSync("write.txt")
-fs.appendFileSync("write.txt" , " keep practicing")
+//fs.appendFileSync("write.txt" , " keep practicing")
+//fs.writeFileSync("file3.html","I")
+//fs.unlinkSync("file3.js.")
+//fs.unlinkSync("file3.html.")
+//fs.unlinkSync('file3.html')
+//fs.writeFileSync("file3.js","js")
+
+
